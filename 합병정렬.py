@@ -15,8 +15,7 @@ def merge(h, m, U, V, S):
     else:
         S[k:h+m] = U[i:m]
 
-    print("S :", S)
-    print("V :", V, "/ U :", U)
+    print("merge     | S :", S)
 
 def mergesort(n, S):
     h = n // 2
@@ -27,6 +26,8 @@ def mergesort(n, S):
     if n > 1:
         U = S[0:h] # S[0] ~ S[h-1] = U[0] ~ U[h-1]
         V = S[h:n] # S[h] ~ S[n-1] = V[0] ~ V[m-1]
+        print("mergesort | U :", U, "/ V :", V)
+        
         mergesort(h, U)
         mergesort(m, V)
         merge(h, m, U, V, S)

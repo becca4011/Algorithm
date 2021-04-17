@@ -1,7 +1,9 @@
 S = [15, 22, 13, 27, 12, 10, 20, 25]
 pivotpoint = 0
 
-def partition(low, high, pivotpoint):
+def partition(low, high):
+    global pivotpoint
+    
     pivotitem = S[low]
     j = low
 
@@ -19,9 +21,9 @@ def partition(low, high, pivotpoint):
 
 def quicksort(low, high):
     if high > low:
-        partition(low, high, pivotpoint)
-        quicksort(low, pivotpoint - 1)
-        #quicksort(pivotpoint + 1, high) # 이게 있는 이유? (없어야 가능함)
+        partition(low, high)
+        quicksort(low, pivotpoint)
+        quicksort(pivotpoint + 1, high)
 
 quicksort(0, 8)
 print(S)
