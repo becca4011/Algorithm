@@ -10,4 +10,4 @@ def bin(n, k):
     return B[n - 1][k]
 
 a, b = map(int, input("a, b입력 : ").split())
-print(bin(a, b))
+print(bin(a, b)) 

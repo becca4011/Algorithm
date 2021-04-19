@@ -16,5 +16,5 @@ def minmult(n, d, P):
                     P[i][j] = k + 1
 
     return M[0][n - 1]
-
+ 
 print(minmult(6, d, P))
