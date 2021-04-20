@@ -1,7 +1,8 @@
 S = [27, 10, 12, 20, 25, 13, 15, 22]
 
-def merge(h, m, U, V, S):
+def merge(h, m, U, V, S): # 합병
     i = j = k = 0
+    # 정렬
     while(i <= h - 1 and j <= m - 1):
         if U[i] < V[j]:
             S[k] = U[i]
@@ -24,6 +25,7 @@ def mergesort(n, S):
     V = list()
 
     if n > 1:
+        # 나누기
         U = S[0:h] # S[0] ~ S[h-1] = U[0] ~ U[h-1]
         V = S[h:n] # S[h] ~ S[n-1] = V[0] ~ V[m-1]
         print("mergesort | U :", U, "/ V :", V)

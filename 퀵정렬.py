@@ -10,11 +10,13 @@ def partition(low, high):
     for i in range(low, high):
         if S[i] < pivotitem:
             j += 1
+            # pivotitem보다 작은 값이면 자리 바꾸기
             temp = S[i]
             S[i] = S[j]
             S[j] = temp
     
     pivotpoint = j
+    # pivotitem과 pivotitem보다 작은 값 중 가장 오른쪽에 있는 값 바꾸기
     temp = S[low]
     S[low] = S[pivotpoint]
     S[pivotpoint] = temp

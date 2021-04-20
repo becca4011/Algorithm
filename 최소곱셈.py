@@ -9,6 +9,7 @@ def minmult(n, d, P):
         for i in range(n - diagonal):
             j = i + diagonal
             m = 10000 # 작은 값 검사하기
+            
             for k in range(i, j):
                 if m > M[i][k] + M[k+1][j] + d[i] * d[k+1] * d[j+1]:
                     M[i][j] = M[i][k] + M[k+1][j] + d[i] * d[k+1] * d[j+1]
