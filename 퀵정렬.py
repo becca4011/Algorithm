@@ -11,15 +11,11 @@ def partition(low, high):
         if S[i] < pivotitem:
             j += 1
             # pivotitem보다 작은 값이면 자리 바꾸기
-            temp = S[i]
-            S[i] = S[j]
-            S[j] = temp
+            S[i], S[j] = S[j], S[i]
     
     pivotpoint = j
     # pivotitem과 pivotitem보다 작은 값 중 가장 오른쪽에 있는 값 바꾸기
-    temp = S[low]
-    S[low] = S[pivotpoint]
-    S[pivotpoint] = temp
+    S[low], S[pivotpoint] = S[pivotpoint], S[low]
 
 def quicksort(low, high):
     if high > low:
